@@ -34,7 +34,7 @@ def main():
 
                 with client:
                     query = userText
-                    result = client.analyze_conversations(
+                    result = client.analyze_conversation(
                         task = {
                             "kind": "Conversation",
                             "analysisInput": {
@@ -58,7 +58,7 @@ def main():
                 entities = result["result"]["prediction"]["entities"]
 
                 print("view top intent:")
-                print("\ttop intent: {}".format(result["result"]["prediction"]["top_Intent"]))
+                print("\ttop intent: {}".format(result["result"]["prediction"]["topIntent"]))
                 print("\tcategory: {}".format(result["result"]["prediction"]["intents"][0]["category"]))
                 print("\tconfidence score: {}\n".format(result["result"]["prediction"]["intents"][0]["confidenceScore"]))
 

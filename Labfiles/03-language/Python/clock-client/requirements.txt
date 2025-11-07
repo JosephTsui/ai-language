@@ -1,2 +1,4 @@
 python-dotenv
 python-dateutil
+azure-ai-language-conversations
+azure-core
